@@ -22,7 +22,7 @@ public class birbScript : MonoBehaviour
         {
             myRigidBody.velocity = Vector2.up * flapVel;
         }
-        if (transform.position.y > 15 || transform.position.y < -15)
+        if (transform.position.y > 17 || transform.position.y < -17)
         {
             logic.GameOver();
         }

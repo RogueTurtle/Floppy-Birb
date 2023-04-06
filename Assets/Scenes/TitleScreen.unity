@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipe Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8801035515487871251, guid: 2147164731a77e0408e951900f06a70f, type: 3}
+      propertyPath: spawnRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2147164731a77e0408e951900f06a70f, type: 3}
 --- !u!1 &688920339
@@ -805,7 +809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: FLAPPY BIRB
+  m_text: FLOPPY BIRB
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
