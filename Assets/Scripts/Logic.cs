@@ -9,6 +9,7 @@ public class Logic : MonoBehaviour
     public GameObject gameOverScreen;
     public birbScript birb;
     public Text highscore;
+    public GameObject pauseScreen;
 
     [ContextMenu("Increase Score")]
     public void AddScore(int scoreToAdd)
@@ -45,5 +46,34 @@ public class Logic : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", intScore);
         }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseScreen.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseScreen.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    private void Update()
+    {
+        if (!pauseScreen.activeSelf && Input.GetKeyDown(KeyCode.Escape) && !gameOverScreen.activeSelf)
+        {
+            PauseGame();
+        } else if(pauseScreen.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+        {
+            ResumeGame();
+        }
+
     }
 }
